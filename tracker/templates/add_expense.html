@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Add_expenses</title>
+    <style>
+        div{
+
+            margin-left: 42%;
+            margin-right: 42%;
+            text-align: left;
+            background-color: sandybrown;
+            padding-left: 15px;
+            padding-bottom: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Budget Tracker</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+            
+        {{form.as_p}}
+        <input type="submit" value="Register">
+        <button><a href="{% url 'read' %}"> Get details</a></button>
+    
+    </form>
+</div>
+</body>
+</html>

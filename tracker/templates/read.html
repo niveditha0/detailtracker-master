@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            margin-left: 30%;
+        }
+        table{
+            border: 2px solid;
+        }
+        td,th{
+            border:1px solid;
+            padding: 20px;
+        }
+        th{
+            background-color: burlywood;
+        }
+    </style>
+    <title>Read</title>
+
+</head>
+<body><div>
+    <h2> Tracking Details</h2>
+    <table   cellspacing="0px" >
+        <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+
+        {% for i in obj %}
+        <tr>
+            <td>{{i.Date}}</td>
+            <td>{{i.Description}}</td>
+            <td>{{i.Amount}}</td>
+            <td>{{i.category}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    <button> <a href="{% url 'addtracker' %}"> Add details</a></button>
+</div>
+</body>
+</html>
